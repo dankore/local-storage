@@ -25,6 +25,7 @@ svg {
 
 .wrapper {
   padding: 20px;
+  min-width: 350px;
   max-width: 350px;
   background: rgba(255,255,255,0.95);
   box-shadow: 0 0 0 10px rgba(0,0,0,0.1);
@@ -64,9 +65,10 @@ h2 {
   margin-right: 10px;
 }
 
-.plates input:checked + label:before {
+input[type="checkbox"]:checked + label:before {
   content: '🌮';
 }
+
 
 .add-items {
   margin-top: 20px;
@@ -77,3 +79,18 @@ h2 {
   outline: 0;
 border: 1px solid rgba(0,0,0,0.1);
 }
+/* Additional customization */
+.buttons_wrapper {
+  margin-top: 30px;
+  width: 100%;
+  min-width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons {
+  outline:0;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 5px 10px;
+}
+
