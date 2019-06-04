@@ -46,7 +46,7 @@
    populateList(items, itemsList);
   }
  
-// Uncheck all checked  
+// Uncheck checked 
 const button1 = document.querySelector('.button1');
 button1.addEventListener('click', uncheckAll);
 
@@ -63,10 +63,19 @@ const button2 = document.querySelector('.button2');
 button2.addEventListener('click', checkAll);
 
 function checkAll() {
- items.forEach(item => {
+  items.forEach(item => {
   item.done = true;
   populateList(items, itemsList);
   localStorage.setItem('items', JSON.stringify(items));
-console.log(item);
  })
+}
+
+// Delete all items
+const button3 = document.querySelector('.button3');
+button3.addEventListener('click', deleteAll);
+
+function deleteAll() {
+ items.splice(0, items.length);
+ populateList(items, itemsList);
+ localStorage.removeItem('items');
 }
