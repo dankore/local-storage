@@ -70,9 +70,24 @@ function checkAll() {
  })
 }
 
-// Delete all items
+// Delete only selected items
 const button3 = document.querySelector('.button3');
-button3.addEventListener('click', deleteAll);
+button3.addEventListener('click', deleteSelected);
+
+
+function deleteSelected() {
+
+  for (var i = items.length - 1; i >= 0; --i) {
+    if (items[i].done == true) {
+        items.splice(i,1);
+        populateList(items, itemsList);
+    }
+ }
+}
+
+// Delete all items
+const button4 = document.querySelector('.button4');
+button4.addEventListener('click', deleteAll);
 
 function deleteAll() {
  items.splice(0, items.length);
