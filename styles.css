@@ -81,9 +81,11 @@ input[type="checkbox"]:checked + label {
   outline: 0;
 border: 1px solid rgba(0,0,0,0.1);
 }
+
 /* Additional customization */
 .buttons_wrapper {
   margin-top: 30px;
+  margin: auto;
   width: 100%;
   min-width: 350px;
   display: flex;
