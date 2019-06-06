@@ -14,8 +14,7 @@ html {
   box-sizing: inherit; 
 }
 
-svg {
-  fill:white;
+img {
   background: rgba(0,0,0,0.1);
   padding: 20px;
   border-radius: 50%;
