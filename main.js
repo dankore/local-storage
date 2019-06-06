@@ -81,6 +81,11 @@ function deleteSelected() {
     if (items[i].done == true) {
         items.splice(i,1);
         populateList(items, itemsList);
+        
+        //Remove selected item
+        const storeItems = JSON.parse(localStorage.getItem('items'));
+        storeItems.splice(i, 1);
+        localStorage.setItem('items', JSON.stringify(storeItems));
     }
  }
 }
