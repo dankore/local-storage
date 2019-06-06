@@ -67,7 +67,10 @@ h2 {
 input[type="checkbox"]:checked + label:before {
   content: '✅';
 }
-
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  font-style: italic;
+}
 
 .add-items {
   margin-top: 20px;
